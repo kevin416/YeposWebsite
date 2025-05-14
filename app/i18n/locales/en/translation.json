@@ -1,0 +1,152 @@
+{
+  "hero": {
+    "title": "Professional Software Development",
+    "subtitle": "Customize Your Digital Solutions",
+    "description": "From websites to mobile apps, from enterprise systems to intelligent solutions, we provide comprehensive software development services to help businesses achieve digital transformation",
+    "cta": {
+      "contact": "Free Consultation",
+      "learnMore": "Learn More"
+    },
+    "techStack": "Tech Stack",
+    "scroll": "Scroll, Learn More"
+  },
+  "coreValues": {
+    "title": "Core Values",
+    "description": "We are committed to creating real business value for our clients and enhancing competitiveness through digital transformation",
+    "efficiency": {
+      "title": "Improve Efficiency",
+      "description": "Through digital solutions, significantly improve business operation efficiency, reduce manual operations, and achieve intelligent management.",
+      "stats": "40% Average Efficiency Improvement"
+    },
+    "revenue": {
+      "title": "Increase Revenue",
+      "description": "Expand customer base, increase customer value and repurchase rate through omni-channel sales and smart marketing tools.",
+      "stats": "25% Average Revenue Growth"
+    },
+    "cost": {
+      "title": "Reduce Costs",
+      "description": "Optimize inventory management, reduce waste, improve human resource utilization, and lower operating costs.",
+      "stats": "30% Average Cost Savings"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Providing comprehensive software development services, from websites to mobile applications, from enterprise systems to intelligent solutions, we are committed to providing the highest quality customized development services",
+    "website": {
+      "title": "Website Development",
+      "description": "Professional responsive website development, including corporate websites, e-commerce platforms, booking systems, etc. Using the latest technology stack to ensure performance and user experience.",
+      "features": [
+        "Responsive design, perfect for all devices",
+        "SEO optimization",
+        "High performance and security",
+        "CMS integration"
+      ]
+    },
+    "mobile": {
+      "title": "Mobile App Development",
+      "description": "iOS and Android native app development, as well as cross-platform solutions. Create smooth, intuitive mobile experiences.",
+      "features": [
+        "iOS and Android native development",
+        "Flutter/React Native cross-platform development",
+        "App store optimization",
+        "App performance and user analytics"
+      ]
+    },
+    "system": {
+      "title": "System Development",
+      "description": "Custom development of enterprise management systems, ERP, CRM, etc. Create exclusive solutions based on enterprise needs.",
+      "features": [
+        "Requirements analysis and system design",
+        "Database design and optimization",
+        "System integration and API development",
+        "Performance optimization and security hardening"
+      ]
+    },
+    "ai": {
+      "title": "Intelligent Solutions",
+      "description": "AI technology integration, automated processes, intelligent analysis, and other solutions to help enterprises achieve digital transformation.",
+      "features": [
+        "AI integration applications",
+        "Business process automation",
+        "Intelligent data analysis",
+        "Machine learning model development"
+      ]
+    },
+    "custom": {
+      "title": "Custom Development",
+      "description": "Provide fully customized software development services based on unique enterprise needs, from requirement analysis to implementation deployment.",
+      "features": [
+        "In-depth requirements analysis",
+        "Architecture design and planning",
+        "Agile development process",
+        "Full technical support"
+      ]
+    },
+    "consulting": {
+      "title": "Technical Consulting",
+      "description": "Provide professional technical consulting, architecture design, technology selection, and other services to help enterprises make correct technical decisions.",
+      "features": [
+        "Technical architecture evaluation",
+        "Performance optimization solutions",
+        "Security audit",
+        "Technical team training"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with our team. We're here to help and answer any questions you might have.",
+    "info": {
+      "phone": "07550006600",
+      "email": "info@yepos.co.uk"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    }
+  },
+  "nav": {
+    "services": "Services",
+    "solutions": "Solutions",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "footer": {
+    "description": "Professional software development services for your business needs.",
+    "quickLinks": "Quick Links",
+    "rights": "All rights reserved."
+  },
+  "industries": {
+    "title": "Industry Solutions",
+    "description": "We provide specialized solutions for various industries, helping businesses achieve digital transformation and enhance competitiveness",
+    "retail": {
+      "title": "Retail & E-commerce",
+      "description": "Help retail businesses achieve digital transformation through online and offline integration, intelligent inventory, and personalized marketing solutions."
+    },
+    "healthcare": {
+      "title": "Healthcare",
+      "description": "Provide medical institutions with patient management, appointment scheduling, and medical record systems to improve service quality and operational efficiency."
+    },
+    "manufacturing": {
+      "title": "Manufacturing",
+      "description": "Help manufacturing enterprises implement intelligent production, supply chain management, and quality control systems."
+    },
+    "education": {
+      "title": "Education",
+      "description": "Provide educational institutions with online learning platforms, student management systems, and educational resource management solutions."
+    },
+    "realestate": {
+      "title": "Real Estate",
+      "description": "Offer property management, online viewing, and customer relationship management solutions for real estate companies."
+    },
+    "travel": {
+      "title": "Travel & Hospitality",
+      "description": "Provide travel and hospitality businesses with booking systems, customer service platforms, and operational management solutions."
+    }
+  }
+} 
