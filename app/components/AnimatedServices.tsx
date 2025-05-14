@@ -5,6 +5,15 @@ import { FaGlobe, FaMobile, FaCogs, FaRobot, FaCode, FaLightbulb } from 'react-i
 import { useTranslation } from '../i18n/client';
 import { useParams } from 'next/navigation';
 
+// 定义服务项的接口
+interface ServiceItem {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+  features: string[]; // 明确标记为字符串数组
+  color: string;
+}
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -30,47 +39,48 @@ export default function AnimatedServices() {
   const params = useParams();
   const { t } = useTranslation(params.lng as string);
 
-  const services = [
+  // 使用类型断言确保 features 被视为字符串数组
+  const services: ServiceItem[] = [
     {
       icon: <FaGlobe className="w-8 h-8" />,
       title: t('services.website.title'),
       description: t('services.website.description'),
-      features: t('services.website.features', { returnObjects: true }),
+      features: t('services.website.features', { returnObjects: true }) as string[],
       color: 'from-blue-500 to-blue-600'
     },
     {
       icon: <FaMobile className="w-8 h-8" />,
       title: t('services.mobile.title'),
       description: t('services.mobile.description'),
-      features: t('services.mobile.features', { returnObjects: true }),
+      features: t('services.mobile.features', { returnObjects: true }) as string[],
       color: 'from-green-500 to-green-600'
     },
     {
       icon: <FaCogs className="w-8 h-8" />,
       title: t('services.system.title'),
       description: t('services.system.description'),
-      features: t('services.system.features', { returnObjects: true }),
+      features: t('services.system.features', { returnObjects: true }) as string[],
       color: 'from-purple-500 to-purple-600'
     },
     {
       icon: <FaRobot className="w-8 h-8" />,
       title: t('services.ai.title'),
       description: t('services.ai.description'),
-      features: t('services.ai.features', { returnObjects: true }),
+      features: t('services.ai.features', { returnObjects: true }) as string[],
       color: 'from-red-500 to-red-600'
     },
     {
       icon: <FaCode className="w-8 h-8" />,
       title: t('services.custom.title'),
       description: t('services.custom.description'),
-      features: t('services.custom.features', { returnObjects: true }),
+      features: t('services.custom.features', { returnObjects: true }) as string[],
       color: 'from-yellow-500 to-yellow-600'
     },
     {
       icon: <FaLightbulb className="w-8 h-8" />,
       title: t('services.consulting.title'),
       description: t('services.consulting.description'),
-      features: t('services.consulting.features', { returnObjects: true }),
+      features: t('services.consulting.features', { returnObjects: true }) as string[],
       color: 'from-indigo-500 to-indigo-600'
     }
   ];
@@ -130,7 +140,7 @@ export default function AnimatedServices() {
                   {service.description}
                 </p>
                 <ul className="space-y-2">
-                  {service.features.map((feature: string, featureIndex: number) => (
+                  {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
                       <svg className="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -163,4 +173,4 @@ export default function AnimatedServices() {
       </div>
     </section>
   );
-} 
+}
