@@ -150,5 +150,70 @@
       "title": "Travel & Hospitality",
       "description": "Provide travel and hospitality businesses with booking systems, customer service platforms, and operational management solutions."
     }
+  },
+  "solutions": {
+    "restaurant": {
+      "hero": {
+        "title": "Digital Solutions for Restaurants",
+        "description": "Comprehensive digital upgrade solutions for your restaurant to improve operational efficiency, increase revenue, and enhance customer experience"
+      },
+      "sections": {
+        "painPoints": "Solving Restaurant Industry Pain Points",
+        "solutions": "Solutions"
+      },
+      "painPoints": {
+        "booking": {
+          "title": "Chaotic Reservation Management",
+          "description": "Traditional phone reservations vs. smart reservation system",
+          "traditional": "Manual answering, error-prone, low efficiency",
+          "digital": "Automated processing, high accuracy, 24/7 service"
+        },
+        "loyalty": {
+          "title": "Low Customer Loyalty",
+          "description": "No membership system vs. intelligent member management",
+          "traditional": "Difficult to identify regular customers, unable to personalize service",
+          "digital": "Precise identification, personalized recommendations, increased repurchase rate"
+        },
+        "menu": {
+          "title": "Outdated Menus",
+          "description": "Paper menus vs. digital menus",
+          "traditional": "High update costs, long cycles, easily misunderstood",
+          "digital": "Real-time updates, multi-language support, image display"
+        }
+      },
+      "solutions": [
+        {
+          "title": "Smart Reservation System",
+          "features": [
+            "Online booking and automatic confirmation",
+            "Intelligent table allocation",
+            "Customer special request recording",
+            "Automatic reminder service"
+          ]
+        },
+        {
+          "title": "Membership Loyalty Program",
+          "features": [
+            "Points reward system",
+            "Personalized offer delivery",
+            "Birthday special care",
+            "Consumption data analysis"
+          ]
+        },
+        {
+          "title": "Digital Menu Management",
+          "features": [
+            "Real-time price updates",
+            "Multi-language support",
+            "Food allergy labels",
+            "Recommended dish display"
+          ]
+        }
+      ],
+      "cta": {
+        "title": "Ready to start your restaurant's digital journey?",
+        "button": "Book a Free Consultation"
+      }
+    }
   }
 } 

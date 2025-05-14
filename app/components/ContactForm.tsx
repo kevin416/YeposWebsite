@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent, useRef, useEffect } from 'react';
+import { useState, FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaCheckCircle } from 'react-icons/fa';
 import { useTranslation } from '../i18n/client';
@@ -10,16 +10,12 @@ import { createContactMessage } from '@/lib/api';
 // Default company ID - replace with your actual company ID
 const DEFAULT_COMPANY_ID = '17';
 
+// 定义输入框样式类名
+const inputClassName = "w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-left";
+
 const ContactForm = () => {
   const params = useParams();
   const { t } = useTranslation(params.lng as string);
-  
-  // 使用refs跟踪表单元素
-  const nameInputRef = useRef<HTMLInputElement>(null);
-  const emailInputRef = useRef<HTMLInputElement>(null);
-  const subjectInputRef = useRef<HTMLInputElement>(null);
-  const messageInputRef = useRef<HTMLTextAreaElement>(null);
-  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -77,26 +73,6 @@ const ContactForm = () => {
 
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
-      {/* 添加全局样式 */}
-      <style jsx global>{`
-        .custom-input {
-          text-align: left !important;
-          direction: ltr !important;
-          padding-left: 12px !important;
-          width: 100%;
-          border: 1px solid #e5e7eb;
-          border-radius: 0.375rem;
-          padding: 0.5rem 0.75rem;
-          outline: none;
-          transition: border-color 0.2s ease;
-        }
-        
-        .custom-input:focus {
-          border-color: #3b82f6;
-          box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
-        }
-      `}</style>
-
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-blue-50 opacity-50" />
       <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]" />
@@ -150,13 +126,12 @@ const ContactForm = () => {
                       {t('contact.form.name')}
                     </label>
                     <input
-                      ref={nameInputRef}
                       type="text"
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="custom-input"
+                      className={inputClassName}
                       required
                     />
                   </div>
@@ -165,13 +140,12 @@ const ContactForm = () => {
                       {t('contact.form.email')}
                     </label>
                     <input
-                      ref={emailInputRef}
                       type="email"
                       id="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="custom-input"
+                      className={inputClassName}
                       required
                     />
                   </div>
@@ -181,13 +155,12 @@ const ContactForm = () => {
                     {t('contact.form.subject')}
                   </label>
                   <input
-                    ref={subjectInputRef}
                     type="text"
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="custom-input"
+                    className={inputClassName}
                   />
                 </div>
                 <div>
@@ -195,13 +168,12 @@ const ContactForm = () => {
                     {t('contact.form.message')}
                   </label>
                   <textarea
-                    ref={messageInputRef}
                     id="message"
                     name="message"
                     rows={6}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="custom-input"
+                    className={inputClassName}
                     required
                   ></textarea>
                 </div>
