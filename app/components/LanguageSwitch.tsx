@@ -18,7 +18,7 @@ const languageNames = {
 };
 
 export default function LanguageSwitch() {
-  const pathname = usePathname();
+  const pathname = usePathname() || '';
   const router = useRouter();
 
   const handleLanguageChange = (newLocale: string) => {
@@ -32,9 +32,17 @@ export default function LanguageSwitch() {
     router.push(newPath);
   };
 
-  // Extract current language from pathname
-  const currentLang = pathname.split('/')[1] || 'en';
-  const Flag = languageNames[currentLang as keyof typeof languageNames].flag;
+  // Extract current language from pathname with safety checks
+  const currentLang = pathname ? pathname.split('/')[1] || 'en' : 'en';
+  
+  // Add safety check to ensure currentLang exists in languageNames
+  const langKey = Object.keys(languageNames).includes(currentLang) ? 
+    currentLang : 
+    'en';
+  
+  // Add safety check to ensure languageNames[langKey] exists before accessing .flag
+  const langData = languageNames[langKey as keyof typeof languageNames] || languageNames.en;
+  const Flag = langData.flag;
 
   return (
     <div className="relative inline-block text-left">
@@ -43,8 +51,8 @@ export default function LanguageSwitch() {
           type="button"
           className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         >
-          <Flag className="w-5 h-5 rounded-sm" />
-          <span>{languageNames[currentLang as keyof typeof languageNames].name}</span>
+          {Flag && <Flag className="w-5 h-5 rounded-sm" />}
+          <span>{langData.name}</span>
           <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
           </svg>
@@ -56,7 +64,7 @@ export default function LanguageSwitch() {
                 key={lang}
                 onClick={() => handleLanguageChange(lang)}
                 className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 flex items-center gap-2 ${
-                  currentLang === lang ? 'bg-gray-50 text-blue-600' : 'text-gray-700'
+                  langKey === lang ? 'bg-gray-50 text-blue-600' : 'text-gray-700'
                 }`}
                 role="menuitem"
               >
@@ -73,4 +81,4 @@ export default function LanguageSwitch() {
       </div>
     </div>
   );
-} 
+}
