@@ -8,7 +8,8 @@ module.exports = {
             cwd: '.',
             env: {
                 NODE_ENV: 'production',
-                PORT: process.env.PORT || 3000  // 显式传递 PORT 变量
+                PORT: process.env.PORT || 3000,   // 显式传递 PORT 变量
+                HOST: '0.0.0.0' // Listen on all interfaces
             }
         }
     ]
