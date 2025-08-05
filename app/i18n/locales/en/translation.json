@@ -10,6 +10,141 @@
     "techStack": "Tech Stack",
     "scroll": "Scroll, Learn More"
   },
+  "companyIntro": {
+    "title": "Leading Global Software Development Company",
+    "description": "We are a premier software development company with a global presence, specializing in custom software solutions, mobile applications, and digital transformation. Our international team combines cutting-edge technology with deep industry expertise to deliver innovative solutions that drive business growth.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower businesses worldwide with innovative software solutions that drive digital transformation, enhance operational efficiency, and create sustainable competitive advantages in the global marketplace."
+    },
+    "advantages": {
+      "global": {
+        "title": "Global Expertise",
+        "description": "International team with diverse cultural backgrounds and global market insights"
+      },
+      "technical": {
+        "title": "Technical Excellence",
+        "description": "Cutting-edge technologies and best practices in software development"
+      },
+      "security": {
+        "title": "Security First",
+        "description": "Enterprise-grade security standards and compliance with international regulations"
+      },
+      "agile": {
+        "title": "Agile Delivery",
+        "description": "Rapid development cycles with continuous integration and deployment"
+      },
+      "teams": {
+        "title": "Dedicated Teams",
+        "description": "Experienced developers and project managers assigned to your project"
+      },
+      "quality": {
+        "title": "Quality Assurance",
+        "description": "Comprehensive testing and quality control processes for reliable solutions"
+      }
+    }
+  },
+  "technicalAdvantages": {
+    "title": "Technical Excellence & Innovation",
+    "description": "We leverage cutting-edge technologies and industry best practices to deliver robust, scalable, and secure software solutions.",
+    "techStack": {
+      "frontend": ["React", "Vue.js", "Angular", "Next.js", "TypeScript"],
+      "backend": ["Node.js", "Python", "Java", "C#", "PHP"],
+      "mobile": ["React Native", "Flutter", "iOS Native", "Android Native"],
+      "database": ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
+      "cloud": ["AWS", "Azure", "Google Cloud", "Docker"],
+      "ai": ["TensorFlow", "PyTorch", "OpenAI API", "Machine Learning"]
+    },
+    "process": {
+      "discovery": {
+        "title": "Discovery & Analysis",
+        "description": "We start by understanding your business needs, goals, and technical requirements through comprehensive analysis."
+      },
+      "design": {
+        "title": "Design & Planning",
+        "description": "Our design team creates user-centered interfaces and our architects plan the technical architecture."
+      },
+      "development": {
+        "title": "Development",
+        "description": "Our experienced developers build your solution using agile methodology with regular updates and feedback."
+      },
+      "testing": {
+        "title": "Testing & QA",
+        "description": "Comprehensive testing ensures your solution is bug-free, secure, and performs optimally."
+      }
+    }
+  },
+  "stats": {
+    "title": "Our Impact in Numbers",
+    "description": "Years of experience, hundreds of successful projects, and thousands of satisfied clients across the globe speak to our commitment to excellence.",
+    "projects": "Projects Completed",
+    "clients": "Happy Clients",
+    "countries": "Countries Served",
+    "satisfaction": "Client Satisfaction"
+  },
+  "serviceProcess": {
+    "title": "Our Development Process",
+    "description": "A proven methodology that ensures successful project delivery, from initial concept to final deployment and beyond.",
+    "steps": {
+      "discovery": {
+        "title": "Discovery & Analysis",
+        "description": "We start by understanding your business needs, goals, and technical requirements through comprehensive analysis."
+      },
+      "design": {
+        "title": "Design & Planning",
+        "description": "Our design team creates user-centered interfaces and our architects plan the technical architecture."
+      },
+      "development": {
+        "title": "Development",
+        "description": "Our experienced developers build your solution using agile methodology with regular updates and feedback."
+      },
+      "testing": {
+        "title": "Testing & QA",
+        "description": "Comprehensive testing ensures your solution is bug-free, secure, and performs optimally."
+      },
+      "deployment": {
+        "title": "Deployment",
+        "description": "We deploy your solution with zero downtime and ensure smooth transition to production."
+      },
+      "support": {
+        "title": "Support & Maintenance",
+        "description": "Ongoing support, maintenance, and updates to keep your solution running smoothly."
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Your Project?",
+      "description": "Let's discuss your requirements and create a custom development plan that perfectly fits your business needs and timeline.",
+      "consultation": "Get Free Consultation",
+      "portfolio": "View Our Work"
+    }
+  },
+  "clientCases": {
+    "title": "Success Stories & Client Results",
+    "description": "Discover how we've helped businesses achieve their digital transformation goals.",
+    "cases": {
+      "ecommerce": {
+        "title": "E-commerce Platform",
+        "industry": "Retail",
+        "description": "Developed a comprehensive e-commerce platform for a leading retail chain.",
+        "results": ["150% Sales Increase", "40% Cost Reduction"],
+        "technologies": ["React", "Node.js", "MongoDB"]
+      },
+      "healthcare": {
+        "title": "Healthcare Management System",
+        "industry": "Healthcare",
+        "description": "Built a patient management system for a network of clinics.",
+        "results": ["60% Time Savings", "Enhanced Patient Care"],
+        "technologies": ["Vue.js", "Python", "PostgreSQL"]
+      },
+      "finance": {
+        "title": "Financial Analytics Dashboard",
+        "industry": "Finance",
+        "description": "Created a real-time analytics dashboard for financial services.",
+        "results": ["Real-time Insights", "90% Faster Reporting"],
+        "technologies": ["Angular", "Java", "Redis"]
+      }
+    }
+  },
   "coreValues": {
     "title": "Core Values",
     "description": "We are committed to creating real business value for our clients and enhancing competitiveness through digital transformation",

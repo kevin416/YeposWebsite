@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 interface Props {
-  params: {
+  params: Promise<{
     lng: string;
-  };
+  }>;
 }
 
-export default function NotFound({ params }: Props) {
-  const lng = params.lng || 'en';
+export default async function NotFound({ params }: Props) {
+  const { lng } = await params;
   
   const texts = {
     en: {

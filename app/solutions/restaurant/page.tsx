@@ -87,24 +87,18 @@ export default function RestaurantSolution() {
     }
   };
   
-  // 尝试使用i18n，如果出错则使用静态翻译
-  let t;
-  try {
-    const { t: translation } = useTranslation(lng);
-    t = translation;
-  } catch (error) {
-    console.error("Translation error:", error);
-    // 如果i18n出错，使用静态翻译
-    t = (key: string, options?: any) => {
-      try {
-        const currentLang = lng === 'zh' ? 'zh' : 'en';
-        const keys = key.split('.');
-        let result = staticTranslations[currentLang as keyof typeof staticTranslations];
-        
-        for (const k of keys) {
+  // 使用静态翻译，避免构建时的翻译错误
+  const currentLang = lng === 'zh' ? 'zh' : 'en';
+  const t = (key: string, options?: any) => {
+    try {
+      const currentLang = lng === 'zh' ? 'zh' : 'en';
+      const keys = key.split('.');
+      let result = staticTranslations[currentLang as keyof typeof staticTranslations];
+      
+              for (const k of keys) {
           if (k === 'solutions' && keys[1] === 'restaurant') {
             // 特殊处理solutions.restaurant路径
-            return result;
+            return options?.defaultValue || key;
           }
           // @ts-ignore
           result = result[k];
@@ -112,12 +106,11 @@ export default function RestaurantSolution() {
             return options?.defaultValue || key;
           }
         }
-        return result || options?.defaultValue || key;
-      } catch (e) {
-        return options?.defaultValue || key;
-      }
-    };
-  }
+        return typeof result === 'string' ? result : (options?.defaultValue || key);
+    } catch (e) {
+      return options?.defaultValue || key;
+    }
+  };
 
   // 使用可能的翻译，如果不存在则使用默认值
   const getTranslation = (key: string, defaultValue: string): string => {
@@ -131,7 +124,7 @@ export default function RestaurantSolution() {
 
   // 定义痛点类型
   interface PainPoint {
-    icon: JSX.Element;
+    icon: React.ReactElement;
     title: string;
     description: string;
     comparison: {

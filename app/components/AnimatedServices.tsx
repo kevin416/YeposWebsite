@@ -7,7 +7,7 @@ import { useParams } from 'next/navigation';
 
 // 定义服务项的接口
 interface ServiceItem {
-  icon: JSX.Element;
+  icon: React.ReactElement;
   title: string;
   description: string;
   features: string[]; // 明确标记为字符串数组

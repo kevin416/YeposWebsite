@@ -23,26 +23,27 @@ async function Header({ lng }: { lng: string }) {
     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              <a href={`/${lng}`} className="text-2xl font-bold text-gray-900">
-                YEPOS
-              </a>
-            </div>
-            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-              <a href="#services" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900">
-                {t('nav.services')}
-              </a>
-              <a href="#solutions" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">
-                {t('nav.solutions')}
-              </a>
-              <a href="#contact" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">
-                {t('nav.contact')}
-              </a>
-            </div>
-          </div>
+          {/* Left side - Language Switch */}
           <div className="flex items-center">
             <LanguageSwitch />
+          </div>
+
+          {/* Center - Navigation */}
+          <div className="flex items-center space-x-6">
+            {/* <a href={`/blog`} className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">
+              Blog
+            </a> */}
+            {/* <a href={`/login`} className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">
+              Login
+            </a> */}
+            
+          </div>
+
+          {/* Right side - Logo */}
+          <div className="flex items-center">
+            <a href={`/`} className="text-1xl text-gray-500">
+              YEPOS 易博科技
+            </a>
           </div>
         </div>
       </div>
@@ -67,6 +68,7 @@ async function Footer({ lng }: { lng: string }) {
             <ul className="mt-4 space-y-2">
               <li><a href="#services" className="text-gray-300 hover:text-white">{t('nav.services')}</a></li>
               <li><a href="#solutions" className="text-gray-300 hover:text-white">{t('nav.solutions')}</a></li>
+              <li><a href={`/${lng}/blog`} className="text-gray-300 hover:text-white">Blog</a></li>
               <li><a href="#contact" className="text-gray-300 hover:text-white">{t('nav.contact')}</a></li>
             </ul>
           </div>
@@ -86,13 +88,15 @@ async function Footer({ lng }: { lng: string }) {
   );
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params: { lng }
-}: Readonly<{
+  params
+}: {
   children: React.ReactNode;
-  params: { lng: string };
-}>) {
+  params: Promise<{ lng: string }>;
+}) {
+  const { lng } = await params;
+  
   return (
     <html lang={lng} dir={dir(lng)} className="scroll-smooth">
       <body className={inter.className}>
