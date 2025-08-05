@@ -23,26 +23,26 @@ const ClientCases = () => {
 
   const cases = [
     {
-      title: 'E-commerce Platform',
-      industry: 'Retail',
-      description: 'Developed a comprehensive e-commerce platform for a leading retail chain.',
-      results: ['150% Sales Increase', '40% Cost Reduction'],
+      title: '电商平台',
+      industry: '零售业',
+      description: '为领先零售连锁企业开发了全面的电商平台。',
+      results: ['销售额增长150%', '成本降低40%'],
       technologies: ['React', 'Node.js', 'MongoDB'],
       rating: 5
     },
     {
-      title: 'Healthcare Management System',
-      industry: 'Healthcare',
-      description: 'Built a patient management system for a network of clinics.',
-      results: ['60% Time Savings', 'Enhanced Patient Care'],
+      title: '医疗管理系统',
+      industry: '医疗健康',
+      description: '为诊所网络构建了患者管理系统。',
+      results: ['节省60%时间', '提升患者护理质量'],
       technologies: ['Vue.js', 'Python', 'PostgreSQL'],
       rating: 5
     },
     {
-      title: 'Financial Analytics Dashboard',
-      industry: 'Finance',
-      description: 'Created a real-time analytics dashboard for financial services.',
-      results: ['Real-time Insights', '90% Faster Reporting'],
+      title: '金融分析仪表板',
+      industry: '金融业',
+      description: '为金融服务创建了实时分析仪表板。',
+      results: ['实时洞察', '报告速度提升90%'],
       technologies: ['Angular', 'Java', 'Redis'],
       rating: 5
     }
@@ -59,12 +59,11 @@ const ClientCases = () => {
           className="text-center mb-16"
         >
           <motion.div variants={itemVariants}>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Success Stories &
-              <span className="text-blue-600 block">Client Results</span>
-            </h2>
+            <h4 className="text-xl md:text-2xl text-gray-900 mb-6">
+              成功案例与客户成果
+            </h4>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Discover how we've helped businesses achieve their digital transformation goals.
+              了解我们如何帮助企业实现数字化转型目标。
             </p>
           </motion.div>
         </motion.div>
@@ -88,7 +87,7 @@ const ClientCases = () => {
                 <p className="text-gray-600 mb-6">{caseStudy.description}</p>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Results:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">关键成果：</h4>
                   <ul className="space-y-2">
                     {caseStudy.results.map((result, i) => (
                       <li key={i} className="flex items-center text-sm text-gray-600">
@@ -100,7 +99,7 @@ const ClientCases = () => {
                 </div>
                 
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">技术栈：</h4>
                   <div className="flex flex-wrap gap-2">
                     {caseStudy.technologies.map((tech, i) => (
                       <span key={i} className="px-2 py-1 bg-white text-gray-700 rounded text-xs border">

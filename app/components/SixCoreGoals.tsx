@@ -112,9 +112,9 @@ const SixCoreGoals = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h4 className="text-1xl md:text-2xl  text-gray-900 mb-6">
             六大核心目标
-          </h2>
+          </h4>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             通过技术创新和生态整合，为海外华人企业提供全方位的数字化解决方案
           </p>
@@ -144,7 +144,7 @@ const SixCoreGoals = () => {
                   </div>
                   
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300">
+                  <h3 className="text-2xl  text-gray-900 mb-4 group-hover:text-gray-800 transition-colors duration-300">
                     {goal.title}
                   </h3>
                   
@@ -175,10 +175,10 @@ const SixCoreGoals = () => {
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">实现数字化转型</h3>
+            <h4 className="text-2xl  mb-4">实现数字化转型</h4>
             <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
               通过这六大核心目标的实现，我们将帮助海外华人企业建立完整的数字化商业生态，
-              在竞争激烈的市场中脱颖而出。
+              在竞争激烈的市场中脱颖而出
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300">
               了解更多

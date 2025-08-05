@@ -92,7 +92,7 @@ const StatsSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h4 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h4 className="text-xl md:text-2xl text-white mb-6">
             数据见证实力
           </h4>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -144,7 +144,7 @@ const StatsSection = () => {
           className="mt-16 text-center"
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <h4 className="text-2xl font-bold text-white mb-4">为什么选择我们</h4>
+            <h4 className="text-2xl text-white mb-4">为什么选择我们</h4>
             <div className="grid md:grid-cols-3 gap-6 text-gray-300">
               <div>
                 <h4 className="font-semibold text-white mb-2">全球化视野</h4>

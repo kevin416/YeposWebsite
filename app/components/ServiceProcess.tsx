@@ -24,43 +24,43 @@ const ServiceProcess = () => {
   const processSteps = [
     {
       icon: Search,
-      title: 'Discovery & Analysis',
-      description: 'We start by understanding your business needs, goals, and technical requirements through comprehensive analysis.',
+      title: '需求发现与分析',
+      description: '我们通过全面分析来了解您的业务需求、目标和技求，为项目奠定坚实基础。',
       color: 'blue',
       step: '01'
     },
     {
       icon: PenTool,
-      title: 'Design & Planning',
-      description: 'Our design team creates user-centered interfaces and our architects plan the technical architecture.',
+      title: '设计与规划',
+      description: '我们的设计团队创建以用户为中心的界面，架构师规划技术架构。',
       color: 'green',
       step: '02'
     },
     {
       icon: Code,
-      title: 'Development',
-      description: 'Our experienced developers build your solution using agile methodology with regular updates and feedback.',
+      title: '开发实施',
+      description: '我们经验丰富的开发团队使用敏捷方法构建您的解决方案，定期更新和反馈。',
       color: 'purple',
       step: '03'
     },
     {
       icon: TestTube,
-      title: 'Testing & QA',
-      description: 'Comprehensive testing ensures your solution is bug-free, secure, and performs optimally.',
+      title: '测试与质量保证',
+      description: '全面测试确保您的解决方案无缺陷、安全且性能最优。',
       color: 'orange',
       step: '04'
     },
     {
       icon: Rocket,
-      title: 'Deployment',
-      description: 'We deploy your solution with zero downtime and ensure smooth transition to production.',
+      title: '部署上线',
+      description: '我们零停机时间部署您的解决方案，确保平滑过渡到生产环境。',
       color: 'red',
       step: '05'
     },
     {
       icon: Headphones,
-      title: 'Support & Maintenance',
-      description: 'Ongoing support, maintenance, and updates to keep your solution running smoothly.',
+      title: '支持与维护',
+      description: '持续的支持、维护和更新，确保您的解决方案平稳运行。',
       color: 'indigo',
       step: '06'
     }
@@ -89,13 +89,11 @@ const ServiceProcess = () => {
           className="text-center mb-16"
         >
           <motion.div variants={itemVariants}>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our Development
-              <span className="text-blue-600 block">Process</span>
-            </h2>
+            <h4 className="text-1xl md:text-2xl font-bold text-gray-900 mb-6">
+              我们的开发流程
+            </h4>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              A proven methodology that ensures successful project delivery, 
-              from initial concept to final deployment and beyond.
+              经过验证的方法论，确保从初始概念到最终部署及后续维护的项目成功交付。
             </p>
           </motion.div>
         </motion.div>
@@ -132,23 +130,22 @@ const ServiceProcess = () => {
           className="mt-16 text-center"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
-            <h3 className="text-3xl font-bold mb-6">Ready to Start Your Project?</h3>
+            <h3 className="text-3xl font-bold mb-6">准备开始您的项目了吗？</h3>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-              Let's discuss your requirements and create a custom development plan 
-              that perfectly fits your business needs and timeline.
+              让我们讨论您的需求，制定一个完美契合您业务需求和时间安排的定制开发计划。
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Get Free Consultation
+                免费咨询
               </a>
               <a
                 href="#portfolio"
                 className="border-2 border-white/50 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                View Our Work
+                查看我们的作品
               </a>
             </div>
           </div>

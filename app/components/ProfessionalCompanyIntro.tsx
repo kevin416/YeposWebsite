@@ -100,12 +100,12 @@ const ProfessionalCompanyIntro = () => {
           className="text-center mb-16"
         >
           <motion.div variants={itemVariants} className="mb-8">
-            <h4 className="text-1xl md:text-2xl font-bold text-gray-900 mb-6">
+            <h4 className="text-1xl md:text-2xl  text-gray-900 mb-6">
               跨国的软件开发公司
             </h4>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               我们是一家具有跨国的专业软件开发公司，专注于定制软件解决方案、移动应用开发和数字化转型。
-              我们的国际化团队融合前沿技术与深厚行业经验，为企业提供创新方案，助力业务增长。
+              我们的国际化团队融合前沿技术与深厚行业经验，为企业提供创新方案，助力业务增长
             </p>
           </motion.div>
         </motion.div>
@@ -124,7 +124,7 @@ const ProfessionalCompanyIntro = () => {
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-6 h-6 text-blue-600" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
+                <div className="text-3xl  text-gray-900 mb-2">{stat.number}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
               </div>
             </motion.div>
@@ -145,9 +145,9 @@ const ProfessionalCompanyIntro = () => {
                 <div className={`w-16 h-16 ${getColorClasses(advantage.color)} rounded-full flex items-center justify-center mx-auto mb-6`}>
                   <advantage.icon className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
+                <h4 className="text-xl font-semibold text-gray-900 mb-4 text-center">
                   {advantage.title}
-                </h3>
+                </h4>
                 <p className="text-gray-600 text-center leading-relaxed">
                   {advantage.description}
                 </p>
@@ -165,9 +165,9 @@ const ProfessionalCompanyIntro = () => {
           className="mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl p-12 text-white text-center">
-            <h3 className="text-3xl font-bold mb-6">我们的使命</h3>
+            <h4 className="text-3xl  mb-6">我们的使命</h4>
             <p className="text-xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-              通过创新软件解决方案，赋能全球企业实现数字化转型，提升运营效率，打造可持续竞争优势。
+              通过创新软件解决方案，赋能全球企业实现数字化转型，提升运营效率，打造可持续竞争优势
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <span className="px-4 py-2 bg-white/20 rounded-full text-sm backdrop-blur-sm">

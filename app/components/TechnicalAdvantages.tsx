@@ -78,12 +78,11 @@ const TechnicalAdvantages = () => {
           className="text-center mb-16"
         >
           <motion.div variants={itemVariants}>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              技术卓越与
-              <span className="text-blue-600 block">创新</span>
-            </h2>
+            <h4 className="text-1xl md:text-2xl  text-gray-900 mb-6">
+              技术卓越与创新
+            </h4>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              我们采用前沿技术与行业最佳实践，交付高可扩展、高安全、高性能的软件解决方案。
+              我们采用前沿技术与行业最佳实践，交付高可扩展、高安全、高性能的软件解决方案
             </p>
           </motion.div>
         </motion.div>

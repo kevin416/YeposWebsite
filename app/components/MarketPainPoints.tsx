@@ -66,9 +66,9 @@ const MarketPainPoints = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h4 className="text-4xl md:text-2xl  text-gray-900 mb-6">
             市场痛点与解决方案
-          </h2>
+          </h4>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             深度分析海外华人企业面临的挑战，提供创新的数字化解决方案
           </p>
@@ -95,7 +95,7 @@ const MarketPainPoints = () => {
                     <AlertTriangle className="w-6 h-6 text-red-600" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{item.category}</h3>
+                    <h4 className="text-2xl  text-gray-900">{item.category}</h4>
                     <p className="text-gray-600">{item.problem}</p>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ const MarketPainPoints = () => {
                   <div className="bg-gray-50 rounded-xl p-6 border-l-4 border-gray-300">
                     <div className="flex items-center mb-4">
                       <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center mr-3">
-                        <span className="text-gray-600 text-sm font-bold">传</span>
+                        <span className="text-gray-600 text-sm ">传</span>
                       </div>
                       <h4 className="text-lg font-semibold text-gray-700">传统方案</h4>
                     </div>
@@ -149,22 +149,22 @@ const MarketPainPoints = () => {
           className="mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold text-center mb-8">解决方案效果对比</h3>
+            <h4 className="text-2xl  text-center mb-8">解决方案效果对比</h4>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold mb-2">30%</div>
+                <div className="text-3xl  mb-2">30%</div>
                 <div className="text-blue-100">人力成本降低</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-2">50%</div>
+                <div className="text-3xl  mb-2">50%</div>
                 <div className="text-blue-100">库存周转提升</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-2">60%</div>
+                <div className="text-3xl  mb-2">60%</div>
                 <div className="text-blue-100">获客成本降低</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-2">100%</div>
+                <div className="text-3xl  mb-2">100%</div>
                 <div className="text-blue-100">服务覆盖度</div>
               </div>
             </div>
@@ -180,12 +180,12 @@ const MarketPainPoints = () => {
           className="text-center mt-12"
         >
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              准备开始数字化转型？
-            </h3>
+            <h4 className="text-2xl  text-gray-900 mb-4">
+              准备开始数字化转型
+            </h4>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               加入我们的平台，体验智能化的商业管理解决方案，
-              让您的企业在数字化时代获得竞争优势。
+              让您的企业在数字化时代获得竞争优势
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300">
