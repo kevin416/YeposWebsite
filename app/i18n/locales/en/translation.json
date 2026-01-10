@@ -1,4 +1,10 @@
 {
+  "notFound": {
+    "title": "404",
+    "subtitle": "Page Not Found",
+    "description": "The page you are looking for doesn't exist or has been removed.",
+    "button": "Back to Home"
+  },
   "hero": {
     "title": "Professional Software Development",
     "subtitle": "Customize Your Digital Solutions",
@@ -10,69 +16,100 @@
     "techStack": "Tech Stack",
     "scroll": "Scroll, Learn More"
   },
-  "companyIntro": {
-    "title": "Leading Global Software Development Company",
-    "description": "We are a premier software development company with a global presence, specializing in custom software solutions, mobile applications, and digital transformation. Our international team combines cutting-edge technology with deep industry expertise to deliver innovative solutions that drive business growth.",
-    "mission": {
-      "title": "Our Mission",
-      "description": "To empower businesses worldwide with innovative software solutions that drive digital transformation, enhance operational efficiency, and create sustainable competitive advantages in the global marketplace."
+  "marketPainPoints": {
+    "title": "Market Pain Points & Solutions",
+    "subtitle": "Deep analysis of challenges faced by overseas Chinese enterprises, providing innovative digital solutions",
+    "traditionalLabel": "Traditional Solution",
+    "ourLabel": "Our Solution",
+    "statisticsTitle": "Solution Effectiveness Comparison",
+    "laborCostReduction": "Labor Cost Reduction",
+    "inventoryTurnover": "Inventory Turnover Increase",
+    "acquisitionCostReduction": "Customer Acquisition Cost Reduction",
+    "serviceCoverage": "Service Coverage",
+    "ctaTitle": "Ready to Start Digital Transformation",
+    "ctaSubtitle": "Join our platform to experience intelligent business management solutions and gain competitive advantages in the digital age",
+    "freeTrial": "Free Trial",
+    "bookDemo": "Book Demo",
+    "operationalCost": {
+      "category": "Operational Cost",
+      "problem": "Rising labor costs (e.g., UK NI tax 15%)",
+      "traditionalSolution": "Add part-time staff",
+      "ourSolution": "AI customer service + automated order processing",
+      "impact": "Reduce 30% labor costs"
     },
-    "advantages": {
-      "global": {
-        "title": "Global Expertise",
-        "description": "International team with diverse cultural backgrounds and global market insights"
-      },
-      "technical": {
-        "title": "Technical Excellence",
-        "description": "Cutting-edge technologies and best practices in software development"
-      },
-      "security": {
-        "title": "Security First",
-        "description": "Enterprise-grade security standards and compliance with international regulations"
-      },
-      "agile": {
-        "title": "Agile Delivery",
-        "description": "Rapid development cycles with continuous integration and deployment"
-      },
-      "teams": {
-        "title": "Dedicated Teams",
-        "description": "Experienced developers and project managers assigned to your project"
-      },
-      "quality": {
-        "title": "Quality Assurance",
-        "description": "Comprehensive testing and quality control processes for reliable solutions"
-      }
+    "supplyChain": {
+      "category": "Supply Chain",
+      "problem": "Chaotic inventory management, high procurement costs",
+      "traditionalSolution": "Manual phone ordering",
+      "ourSolution": "Supplier API direct connection + intelligent replenishment",
+      "impact": "Improve 50% turnover rate"
+    },
+    "marketing": {
+      "category": "Marketing Acquisition",
+      "problem": "Dependence on high commission platforms (30%+)",
+      "traditionalSolution": "Passive order waiting",
+      "ourSolution": "Social media marketing tools + private domain traffic operation",
+      "impact": "Reduce 60% customer acquisition costs"
+    },
+    "services": {
+      "category": "Single Service",
+      "problem": "Unable to meet diverse needs of international students",
+      "traditionalSolution": "Single catering service",
+      "ourSolution": "Catering/supermarket/rental/second-hand/study abroad and other life service aggregation",
+      "impact": "One-stop service platform"
     }
   },
   "technicalAdvantages": {
     "title": "Technical Excellence & Innovation",
-    "description": "We leverage cutting-edge technologies and industry best practices to deliver robust, scalable, and secure software solutions.",
+    "subtitle": "We adopt cutting-edge technologies and industry best practices to deliver highly scalable, secure, and high-performance software solutions",
     "techStack": {
-      "frontend": ["React", "Vue.js", "Angular", "Next.js", "TypeScript"],
-      "backend": ["Node.js", "Python", "Java", "C#", "PHP"],
-      "mobile": ["React Native", "Flutter", "iOS Native", "Android Native"],
-      "database": ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
-      "cloud": ["AWS", "Azure", "Google Cloud", "Docker"],
-      "ai": ["TensorFlow", "PyTorch", "OpenAI API", "Machine Learning"]
+      "frontend": "Frontend Technologies",
+      "backend": "Backend Technologies",
+      "mobile": "Mobile",
+      "database": "Database",
+      "cloud": "Cloud Services",
+      "ai": "AI & Machine Learning"
     },
-    "process": {
-      "discovery": {
-        "title": "Discovery & Analysis",
-        "description": "We start by understanding your business needs, goals, and technical requirements through comprehensive analysis."
+    "developmentProcess": [
+      {
+        "title": "Requirements Analysis",
+        "description": "Deep understanding of business needs and technical requirements"
       },
-      "design": {
-        "title": "Design & Planning",
-        "description": "Our design team creates user-centered interfaces and our architects plan the technical architecture."
+      {
+        "title": "Agile Development",
+        "description": "Iterative development with regular client feedback and updates"
       },
-      "development": {
-        "title": "Development",
-        "description": "Our experienced developers build your solution using agile methodology with regular updates and feedback."
+      {
+        "title": "Quality Testing",
+        "description": "Full-process testing including unit, integration, and user acceptance"
       },
-      "testing": {
-        "title": "Testing & QA",
-        "description": "Comprehensive testing ensures your solution is bug-free, secure, and performs optimally."
+      {
+        "title": "Deployment",
+        "description": "Seamless deployment with CI/CD automation and monitoring"
       }
-    }
+    ]
+  },
+
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Meet the experts behind our success. Our talented team brings together years of experience and passion for innovation.",
+    "members": [
+      {
+        "name": "John Doe",
+        "position": "CEO & Founder",
+        "bio": "Visionary leader with 15+ years of experience in technology and innovation."
+      },
+      {
+        "name": "Jane Smith",
+        "position": "CTO",
+        "bio": "Tech enthusiast and software architect with a passion for cutting-edge solutions."
+      },
+      {
+        "name": "Mike Johnson",
+        "position": "Lead Designer",
+        "bio": "Creative mind behind our stunning designs and exceptional user experiences."
+      }
+    ]
   },
   "stats": {
     "title": "Our Impact in Numbers",
@@ -84,66 +121,140 @@
   },
   "serviceProcess": {
     "title": "Our Development Process",
-    "description": "A proven methodology that ensures successful project delivery, from initial concept to final deployment and beyond.",
-    "steps": {
-      "discovery": {
-        "title": "Discovery & Analysis",
-        "description": "We start by understanding your business needs, goals, and technical requirements through comprehensive analysis."
+    "subtitle": "A proven methodology that ensures successful project delivery from initial concept to final deployment and ongoing maintenance",
+    "steps": [
+      {
+        "title": "Requirements Discovery & Analysis",
+        "description": "We understand your business needs, goals, and technical requirements through comprehensive analysis to lay a solid foundation for the project."
       },
-      "design": {
+      {
         "title": "Design & Planning",
-        "description": "Our design team creates user-centered interfaces and our architects plan the technical architecture."
+        "description": "Our design team creates user-centered interfaces and architects plan the technical architecture."
       },
-      "development": {
-        "title": "Development",
-        "description": "Our experienced developers build your solution using agile methodology with regular updates and feedback."
+      {
+        "title": "Development Implementation",
+        "description": "Our experienced development team builds your solution using agile methods with regular updates and feedback."
       },
-      "testing": {
-        "title": "Testing & QA",
-        "description": "Comprehensive testing ensures your solution is bug-free, secure, and performs optimally."
+      {
+        "title": "Testing & Quality Assurance",
+        "description": "Comprehensive testing ensures your solution is defect-free, secure, and performs optimally."
       },
-      "deployment": {
-        "title": "Deployment",
-        "description": "We deploy your solution with zero downtime and ensure smooth transition to production."
+      {
+        "title": "Deployment Launch",
+        "description": "We deploy your solution with zero downtime and ensure smooth transition to production environment."
       },
-      "support": {
+      {
         "title": "Support & Maintenance",
-        "description": "Ongoing support, maintenance, and updates to keep your solution running smoothly."
+        "description": "Ongoing support, maintenance, and updates to ensure your solution runs smoothly."
       }
-    },
+    ],
     "cta": {
-      "title": "Ready to Start Your Project?",
-      "description": "Let's discuss your requirements and create a custom development plan that perfectly fits your business needs and timeline.",
-      "consultation": "Get Free Consultation",
+      "title": "Ready to start your project?",
+      "subtitle": "Let's discuss your requirements and create a custom development plan that perfectly fits your business needs and timeline.",
+      "consultation": "Free Consultation",
       "portfolio": "View Our Work"
+    }
+  },
+  "animatedAbout": {
+    "title": "About YEPOS",
+    "subtitle": "At YEPOS, we believe in transforming ideas into reality. With years of experience and a passionate team, we deliver innovative solutions that help businesses thrive in the digital age.",
+    "description": "Our commitment to excellence and customer satisfaction drives everything we do. We work closely with our clients to understand their unique challenges and deliver tailored solutions that exceed expectations.",
+    "features": [
+      "Industry-leading innovation and technology",
+      "Dedicated team of expert professionals",
+      "Proven track record of successful projects",
+      "Customer-centric approach to solutions"
+    ],
+    "cta": "Get in Touch",
+    "brand": {
+      "name": "YEPOS",
+      "tagline": "Innovation & Excellence"
+    }
+  },
+  "professionalCompanyIntro": {
+    "title": "Leading Global Software Development Company",
+    "subtitle": "We are a premier software development company with a global presence, specializing in custom software solutions, mobile applications, and digital transformation. Our international team combines cutting-edge technology with deep industry expertise to deliver innovative solutions that drive business growth.",
+    "stats": [
+      {
+        "number": "5+",
+        "label": "Countries Served"
+      },
+      {
+        "number": "95+",
+        "label": "Projects Completed"
+      },
+      {
+        "number": "95%",
+        "label": "Client Satisfaction"
+      },
+      {
+        "number": "24/7",
+        "label": "Support"
+      }
+    ],
+    "advantages": [
+      {
+        "title": "Global Expertise",
+        "description": "International team with diverse cultural backgrounds and global market insights"
+      },
+      {
+        "title": "Technical Excellence",
+        "description": "Cutting-edge technologies and best practices in software development"
+      },
+      {
+        "title": "Security First",
+        "description": "Enterprise-grade security standards and compliance with international regulations"
+      },
+      {
+        "title": "Agile Delivery",
+        "description": "Rapid development cycles with continuous integration and deployment"
+      },
+      {
+        "title": "Dedicated Teams",
+        "description": "Experienced developers and project managers assigned to your project"
+      },
+      {
+        "title": "Quality Assurance",
+        "description": "Comprehensive testing and quality control processes for reliable solutions"
+      }
+    ],
+    "mission": {
+      "title": "Our Mission",
+      "description": "To empower businesses worldwide with innovative software solutions that drive digital transformation, enhance operational efficiency, and create sustainable competitive advantages in the global marketplace.",
+      "values": [
+        "Innovation Driven",
+        "Quality First",
+        "Customer Centric",
+        "Global Vision"
+      ]
     }
   },
   "clientCases": {
     "title": "Success Stories & Client Results",
-    "description": "Discover how we've helped businesses achieve their digital transformation goals.",
-    "cases": {
-      "ecommerce": {
+    "subtitle": "Discover how we've helped businesses achieve their digital transformation goals.",
+    "cases": [
+      {
         "title": "E-commerce Platform",
         "industry": "Retail",
         "description": "Developed a comprehensive e-commerce platform for a leading retail chain.",
         "results": ["150% Sales Increase", "40% Cost Reduction"],
         "technologies": ["React", "Node.js", "MongoDB"]
       },
-      "healthcare": {
+      {
         "title": "Healthcare Management System",
         "industry": "Healthcare",
         "description": "Built a patient management system for a network of clinics.",
         "results": ["60% Time Savings", "Enhanced Patient Care"],
         "technologies": ["Vue.js", "Python", "PostgreSQL"]
       },
-      "finance": {
+      {
         "title": "Financial Analytics Dashboard",
         "industry": "Finance",
         "description": "Created a real-time analytics dashboard for financial services.",
         "results": ["Real-time Insights", "90% Faster Reporting"],
         "technologies": ["Angular", "Java", "Redis"]
       }
-    }
+    ]
   },
   "coreValues": {
     "title": "Core Values",
@@ -233,12 +344,31 @@
     "description": "Get in touch with our team. We're here to help and answer any questions you might have.",
     "info": {
       "phone": "07550006600",
-      "email": "info@yepos.co.uk"
+      "email": "info@yepos.co.uk",
+      "emailTitle": "Email",
+      "phoneTitle": "Phone"
     },
     "form": {
       "name": "Name",
       "email": "Email",
       "subject": "Subject",
+      "product": "Product of Interest",
+      "productOptions": {
+        "yepos-manager": "YeposManager (Store App)",
+        "manager-next": "Manager Next (Management Backend)",
+        "print-proxy": "Print Proxy (Printing Platform)",
+        "yepos-online": "Yepos Online (Online Ordering)"
+      },
+      "products": {
+        "yeposManager": "YeposManager (Store App)",
+        "managerNext": "Manager Next (Management Backend)",
+        "printProxy": "Print Proxy (Printing Platform)",
+        "yeposOnline": "Yepos Online (Online Ordering)",
+        "other": "Other / Consultation"
+      },
+      "preferredTime": "Preferred Demo Time (Optional)",
+      "preferredTimePlaceholder": "e.g., Tuesday 2:00 PM - 4:00 PM or 2026-01-10T14:00",
+      "prefillNotice": "Pre-filled for you: Product",
       "defaultSubject": "Website Contact Form",
       "message": "Message",
       "submit": "Send Message",
@@ -247,11 +377,33 @@
       "error": "Error sending message. Please try again."
     }
   },
-  "nav": {
-    "services": "Services",
-    "solutions": "Solutions",
-    "contact": "Contact",
-    "language": "Language"
+  "products": {
+    "title": "Our Product Suite",
+    "description": "Covering store-end, management backend and printing platform, building an integrated operation process.",
+    "yeposManager": {
+      "title": "YeposManager (Store App)",
+      "description": "Mobile/tablet native ordering and store management, supporting employee permissions and print configuration.",
+      "highlight": "On-site Installation & Training"
+    },
+    "managerNext": {
+      "title": "Manager Next (Management Backend)",
+      "description": "Multi-store unified backend, order merging, reports and permission management, suitable for chain stores.",
+      "highlight": "Chain & Permissions"
+    },
+    "printProxy": {
+      "title": "Print Proxy (Printing Platform)",
+      "description": "Stable local proxy printing with retry mechanism, compatible with various printers.",
+      "highlight": "Compatible with Old Models"
+    },
+    "yeposOnline": {
+      "title": "Yepos Online (Online Ordering)",
+      "description": "Customer-facing online ordering and multi-channel aggregation, supporting multiple languages and store switching.",
+      "highlight": "Multi-channel Order Receiving"
+    }
+  },
+  "brand": {
+    "name": "Yepos",
+    "tagline": "Restaurant Integrated Solution"
   },
   "footer": {
     "description": "Professional software development services for your business needs.",
@@ -349,6 +501,65 @@
         "title": "Ready to start your restaurant's digital journey?",
         "button": "Book a Free Consultation"
       }
+    }
+  },
+  "companyIntro": {
+    "title": "Europe's First Chinese Business",
+    "titleHighlight": "Intelligent Ecosystem Platform",
+    "subtitle": "Committed to building a four-in-one digital business infrastructure of 'management + supply chain + marketing + life services', starting from the UK, empowering overseas Chinese enterprises with AI technology to help them achieve cost reduction, efficiency improvement and business growth in digital transformation.",
+    "features": [
+      {
+        "title": "Intelligent Management",
+        "description": "Provide SaaS management tools, reduce 30% labor costs through AI automation, and improve operational efficiency"
+      },
+      {
+        "title": "Supply Chain Optimization",
+        "description": "Connect with local suppliers to achieve intelligent inventory management, reduce procurement costs, and improve turnover rate"
+      },
+      {
+        "title": "Omni-channel Marketing",
+        "description": "Integrate promotion tools to enhance private domain traffic operation capabilities and reduce customer acquisition costs by 60%"
+      },
+      {
+        "title": "Life Services",
+        "description": "Build a life service platform for international students covering housing, second-hand transactions, study abroad consulting, etc."
+      }
+    ],
+    "mission": {
+      "title": "Our Mission",
+      "description": "Become the 'digital infrastructure' of overseas Chinese business, reshape the European Chinese economic ecosystem, and enable every overseas Chinese entrepreneur to succeed in the digital age!"
+    }
+  },
+  "blog": {
+    "featured": {
+      "title": "Latest Insights",
+      "description": "Discover the latest trends, tips, and insights from our team of experts. Stay ahead with our curated blog content."
+    },
+    "views": "views",
+    "readMore": "Read More",
+    "viewAllPosts": "View All Posts"
+  },
+  "login": {
+    "title": "Welcome Back",
+    "subtitle": "Sign in to your account",
+    "form": {
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "submit": "Sign In"
+    },
+    "divider": "Or continue with",
+    "signup": {
+      "text": "Don't have an account?",
+      "link": "Sign up"
+    },
+    "success": "Login successful! Redirecting...",
+    "error": {
+      "invalidCredentials": "Login failed, please try again.",
+      "networkError": "Network error, please check your connection and try again."
     }
   }
 } 

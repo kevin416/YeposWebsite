@@ -2,8 +2,13 @@
 
 import { motion } from 'framer-motion';
 import { Code, Database, Cloud, Shield, Zap, GitBranch, TestTube, Rocket } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useParams } from 'next/navigation';
 
 const TechnicalAdvantages = () => {
+  const params = useParams();
+  const { t } = useTranslation(params.lng as string);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -33,26 +38,26 @@ const TechnicalAdvantages = () => {
   const developmentProcess = [
     {
       icon: Code,
-      title: '需求分析',
-      description: '深入理解业务需求与技术要求',
+      title: t('technicalAdvantages.developmentProcess.0.title'),
+      description: t('technicalAdvantages.developmentProcess.0.description'),
       color: 'blue'
     },
     {
       icon: GitBranch,
-      title: '敏捷开发',
-      description: '迭代式开发，定期客户反馈与更新',
+      title: t('technicalAdvantages.developmentProcess.1.title'),
+      description: t('technicalAdvantages.developmentProcess.1.description'),
       color: 'green'
     },
     {
       icon: TestTube,
-      title: '质量测试',
-      description: '全流程测试，包括单元、集成与用户验收',
+      title: t('technicalAdvantages.developmentProcess.2.title'),
+      description: t('technicalAdvantages.developmentProcess.2.description'),
       color: 'purple'
     },
     {
       icon: Rocket,
-      title: '上线部署',
-      description: '无缝部署，CI/CD自动化与监控',
+      title: t('technicalAdvantages.developmentProcess.3.title'),
+      description: t('technicalAdvantages.developmentProcess.3.description'),
       color: 'orange'
     }
   ];
@@ -79,10 +84,10 @@ const TechnicalAdvantages = () => {
         >
           <motion.div variants={itemVariants}>
             <h4 className="text-1xl md:text-2xl  text-gray-900 mb-6">
-              技术卓越与创新
+              {t('technicalAdvantages.title')}
             </h4>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              我们采用前沿技术与行业最佳实践，交付高可扩展、高安全、高性能的软件解决方案
+              {t('technicalAdvantages.subtitle')}
             </p>
           </motion.div>
         </motion.div>
@@ -92,12 +97,7 @@ const TechnicalAdvantages = () => {
             <motion.div key={category} variants={itemVariants}>
               <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                 <h4 className="text-xl font-semibold text-gray-900 mb-6 capitalize">
-                  {category === 'frontend' && '前端技术'}
-                  {category === 'backend' && '后端技术'}
-                  {category === 'mobile' && '移动端'}
-                  {category === 'database' && '数据库'}
-                  {category === 'cloud' && '云服务'}
-                  {category === 'ai' && '人工智能与机器学习'}
+                  {t(`technicalAdvantages.techStack.${category}`)}
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {technologies.map((tech, techIndex) => (

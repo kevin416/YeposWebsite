@@ -9,50 +9,54 @@ import {
   CreditCard, 
   BarChart3 
 } from 'lucide-react';
+import { useTranslation } from '../i18n/client';
+import { useParams } from 'next/navigation';
 
 const SixCoreGoals = () => {
+  const params = useParams();
+  const { t } = useTranslation(params.lng as string);
   const goals = [
     {
       icon: TrendingDown,
-      title: "降本增效",
-      description: "通过AI自动化工具减少30%人力成本，提升运营效率",
+      title: t('sixCoreGoals.costEfficiency.title'),
+      description: t('sixCoreGoals.costEfficiency.description'),
       color: "blue",
-      metrics: "30%成本降低"
+      metrics: t('sixCoreGoals.costEfficiency.metrics')
     },
     {
       icon: Package,
-      title: "供应链优化",
-      description: "对接本土供应商，实现智能库存管理，提高周转率",
+      title: t('sixCoreGoals.supplyChain.title'),
+      description: t('sixCoreGoals.supplyChain.description'),
       color: "green",
-      metrics: "50%周转提升"
+      metrics: t('sixCoreGoals.supplyChain.metrics')
     },
     {
       icon: Megaphone,
-      title: "全渠道营销",
-      description: "集成类似抖音/美团式推广工具，提升私域流量运营能力",
+      title: t('sixCoreGoals.marketing.title'),
+      description: t('sixCoreGoals.marketing.description'),
       color: "purple",
-      metrics: "60%获客成本降低"
+      metrics: t('sixCoreGoals.marketing.metrics')
     },
     {
       icon: Home,
-      title: "生活服务聚合",
-      description: "构建涵盖租房、二手交易、留学咨询等留学生生活服务平台",
+      title: t('sixCoreGoals.services.title'),
+      description: t('sixCoreGoals.services.description'),
       color: "orange",
-      metrics: "一站式服务"
+      metrics: t('sixCoreGoals.services.metrics')
     },
     {
       icon: CreditCard,
-      title: "支付整合",
-      description: "支持微信/支付宝与本地支付方式（如Apple Pay、Google Pay）",
+      title: t('sixCoreGoals.payment.title'),
+      description: t('sixCoreGoals.payment.description'),
       color: "indigo",
-      metrics: "多支付方式"
+      metrics: t('sixCoreGoals.payment.metrics')
     },
     {
       icon: BarChart3,
-      title: "数据驱动",
-      description: "提供实时经营分析看板，辅助决策，实现精准运营",
+      title: t('sixCoreGoals.analytics.title'),
+      description: t('sixCoreGoals.analytics.description'),
       color: "red",
-      metrics: "实时数据分析"
+      metrics: t('sixCoreGoals.analytics.metrics')
     }
   ];
 

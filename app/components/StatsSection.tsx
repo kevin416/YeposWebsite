@@ -3,8 +3,12 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useState, useEffect } from 'react';
+import { useTranslation } from '../i18n/client';
+import { useParams } from 'next/navigation';
 
 const StatsSection = () => {
+  const params = useParams();
+  const { t } = useTranslation(params.lng as string);
   const [ref, inView] = useInView({
     threshold: 0.3,
     triggerOnce: true
@@ -20,25 +24,25 @@ const StatsSection = () => {
   const stats = [
     {
       number: 95,
-      label: '完成项目',
+      label: t('statsSection.projects'),
       suffix: '+',
       color: 'blue'
     },
     {
       number: 95,
-      label: '满意客户',
+      label: t('statsSection.clients'),
       suffix: '+',
       color: 'green'
     },
     {
       number: 5,
-      label: '服务国家',
+      label: t('statsSection.countries'),
       suffix: '+',
       color: 'purple'
     },
     {
       number: 98,
-      label: '客户满意度',
+      label: t('statsSection.satisfaction'),
       suffix: '%',
       color: 'orange'
     }

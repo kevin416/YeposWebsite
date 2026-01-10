@@ -2,15 +2,14 @@
 
 import { motion } from 'framer-motion';
 import { FaCheck } from 'react-icons/fa';
-
-const features = [
-  "Industry-leading innovation and technology",
-  "Dedicated team of expert professionals",
-  "Proven track record of successful projects",
-  "Customer-centric approach to solutions"
-];
+import { useTranslation } from 'react-i18next';
+import { useParams } from 'next/navigation';
 
 export default function AnimatedAbout() {
+  const params = useParams();
+  const { t } = useTranslation(params.lng as string);
+
+  const features = t('animatedAbout.features', { returnObjects: true }) as string[];
   return (
     <section id="about" className="py-24 relative overflow-hidden">
       {/* Background decoration */}
@@ -34,7 +33,7 @@ export default function AnimatedAbout() {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                About YEPOS
+                {t('animatedAbout.title')}
               </motion.h2>
               <motion.div
                 className="w-20 h-1 bg-blue-600 rounded-full mt-4"
@@ -47,12 +46,10 @@ export default function AnimatedAbout() {
 
             <div className="space-y-6">
               <p className="text-lg text-gray-600 leading-relaxed">
-                At YEPOS, we believe in transforming ideas into reality. With years of experience and a passionate team,
-                we deliver innovative solutions that help businesses thrive in the digital age.
+                {t('animatedAbout.subtitle')}
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Our commitment to excellence and customer satisfaction drives everything we do. We work closely with our
-                clients to understand their unique challenges and deliver tailored solutions that exceed expectations.
+                {t('animatedAbout.description')}
               </p>
             </div>
 
@@ -84,7 +81,7 @@ export default function AnimatedAbout() {
                 href="#contact"
                 className="btn-primary inline-flex items-center group"
               >
-                Get in Touch
+                {t('animatedAbout.cta')}
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
               </a>
             </motion.div>
@@ -109,8 +106,8 @@ export default function AnimatedAbout() {
                   viewport={{ once: true }}
                   className="text-white text-center"
                 >
-                  <div className="text-8xl font-bold mb-6 gradient-text">YEPOS</div>
-                  <div className="text-2xl font-light text-white/90">Innovation & Excellence</div>
+                  <div className="text-8xl font-bold mb-6 gradient-text">{t('animatedAbout.brand.name')}</div>
+                  <div className="text-2xl font-light text-white/90">{t('animatedAbout.brand.tagline')}</div>
                 </motion.div>
                 
                 {/* Floating elements */}

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import LanguageSwitch from './components/LanguageSwitch';
 import { languages } from './i18n/settings';
 import { dir } from 'i18next';
 import { getTranslation } from './i18n/server';
@@ -17,39 +16,8 @@ export const metadata: Metadata = {
   description: "Professional software development services including website development, mobile apps, enterprise systems, and intelligent solutions.",
 };
 
-async function Header({ lng }: { lng: string }) {
-  const { t } = await getTranslation(lng);
-  return (
-    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          {/* Left side - Language Switch */}
-          <div className="flex items-center">
-            <LanguageSwitch />
-          </div>
-
-          {/* Center - Navigation */}
-          <div className="flex items-center space-x-6">
-            {/* <a href={`/blog`} className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">
-              Blog
-            </a> */}
-            {/* <a href={`/login`} className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">
-              Login
-            </a> */}
-            
-          </div>
-
-          {/* Right side - Logo */}
-          <div className="flex items-center">
-            <a href={`/`} className="text-1xl text-gray-500">
-              YEPOS 易博科技
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-}
+import Header from './components/Header';
+import PreventHashScrollOnReload from './components/PreventHashScrollOnReload';
 
 async function Footer({ lng }: { lng: string }) {
   const { t } = await getTranslation(lng);
@@ -98,9 +66,27 @@ export default async function RootLayout({
   const { lng } = await params;
   
   return (
-    <html lang={lng} dir={dir(lng)} className="scroll-smooth">
+    <html lang={lng} dir={dir(lng)}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if ('scrollRestoration' in history) {
+                  history.scrollRestoration = 'manual';
+                }
+                // Force scroll to top on load to prevent any auto-scroll
+                window.addEventListener('load', function() {
+                  window.scrollTo(0, 0);
+                });
+              } catch (e) {}
+            `,
+          }}
+        />
+      </head>
       <body className={inter.className}>
-        <Header lng={lng} />
+        <Header />
+        <PreventHashScrollOnReload />
         <main className="min-h-screen pt-16">
           {children}
         </main>

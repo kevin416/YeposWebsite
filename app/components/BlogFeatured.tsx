@@ -5,8 +5,12 @@ import { motion } from 'framer-motion';
 import { FaArrowRight, FaClock, FaEye } from 'react-icons/fa';
 import Link from 'next/link';
 import { getFeaturedPosts } from '@/lib/api';
+import { useTranslation } from '../i18n/client';
+import { useParams } from 'next/navigation';
 
 const BlogFeatured = () => {
+  const params = useParams();
+  const { t } = useTranslation(params.lng as string);
   const companyId = process.env.NEXT_PUBLIC_COMPANY_ID || '1';
   
   const [posts, setPosts] = useState([]);
@@ -29,7 +33,8 @@ const BlogFeatured = () => {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('zh-CN', {
+    const locale = params.lng === 'zh' ? 'zh-CN' : 'en-US';
+    return date.toLocaleDateString(locale, {
       month: 'short',
       day: 'numeric',
       year: 'numeric'
@@ -75,11 +80,10 @@ const BlogFeatured = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Latest Insights
+            {t('blog.featured.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the latest trends, tips, and insights from our team of experts. 
-            Stay ahead with our curated blog content.
+            {t('blog.featured.description')}
           </p>
         </motion.div>
 
@@ -116,26 +120,26 @@ const BlogFeatured = () => {
                   <span>{formatDate(post.published_at)}</span>
                   <span className="mx-2">•</span>
                   <FaEye className="mr-1" />
-                  <span>{post.view_count} views</span>
+                  <span>{post.view_count} {t('blog.views')}</span>
                 </div>
 
                 <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                                   <Link href={`/zh/blog/${post.slug}`} className="hover:text-blue-600 transition-colors">
-                   {post.title}
-                 </Link>
+                  <Link href={`/${params.lng}/blog/${post.slug}`} className="hover:text-blue-600 transition-colors">
+                    {post.title}
+                  </Link>
                 </h3>
 
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
 
-                                 <Link
-                   href={`/zh/blog/${post.slug}`}
-                   className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
-                 >
-                   Read More
-                   <FaArrowRight className="ml-2 text-sm" />
-                 </Link>
+                <Link
+                  href={`/${params.lng}/blog/${post.slug}`}
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                >
+                  {t('blog.readMore')}
+                  <FaArrowRight className="ml-2 text-sm" />
+                </Link>
               </div>
             </motion.article>
           ))}
@@ -149,10 +153,10 @@ const BlogFeatured = () => {
           className="text-center"
         >
           <Link
-                            href={`/zh/blog`}
+            href={`/${params.lng}/blog`}
             className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition-colors font-medium"
           >
-            View All Posts
+            {t('blog.viewAllPosts')}
             <FaArrowRight className="ml-2" />
           </Link>
         </motion.div>

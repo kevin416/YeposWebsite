@@ -4,8 +4,12 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash, FaSpinner } from 'react-icons/fa';
 import Link from 'next/link';
+import { useTranslation } from '../../i18n/client';
+import { useParams } from 'next/navigation';
 
 export default function LoginForm() {
+  const params = useParams();
+  const { t } = useTranslation(params.lng as string);
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -47,7 +51,7 @@ export default function LoginForm() {
       const data = await response.json();
 
       if (response.ok) {
-        setSuccess('登录成功！正在跳转...');
+        setSuccess(t('login.success'));
         // Store token in localStorage or cookies
         if (data.token) {
           localStorage.setItem('auth_token', data.token);
@@ -58,11 +62,11 @@ export default function LoginForm() {
           window.location.href = '/';
         }, 1500);
       } else {
-        setError(data.message || '登录失败，请重试。');
+        setError(data.message || t('login.error.invalidCredentials'));
       }
     } catch (error) {
       console.error('Login error:', error);
-      setError('网络错误，请检查连接后重试。');
+      setError(t('login.error.networkError'));
     } finally {
       setLoading(false);
     }
@@ -77,8 +81,8 @@ export default function LoginForm() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">欢迎回来</h2>
-          <p className="text-gray-600">登录您的账户</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">{t('login.title')}</h2>
+          <p className="text-gray-600">{t('login.subtitle')}</p>
         </motion.div>
       </div>
 
@@ -93,7 +97,7 @@ export default function LoginForm() {
             {/* Email Field */}
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                邮箱地址
+                {t('login.form.email')}
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -108,7 +112,7 @@ export default function LoginForm() {
                   value={formData.email}
                   onChange={handleInputChange}
                   className="appearance-none block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                  placeholder="请输入您的邮箱"
+                  placeholder={t('login.form.emailPlaceholder')}
                 />
               </div>
             </div>
@@ -116,7 +120,7 @@ export default function LoginForm() {
             {/* Password Field */}
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                密码
+                {t('login.form.password')}
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -131,7 +135,7 @@ export default function LoginForm() {
                   value={formData.password}
                   onChange={handleInputChange}
                   className="appearance-none block w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                  placeholder="请输入您的密码"
+                  placeholder={t('login.form.passwordPlaceholder')}
                 />
                 <button
                   type="button"
@@ -157,13 +161,13 @@ export default function LoginForm() {
                   className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                 />
                 <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                  记住我
+                  {t('login.form.rememberMe')}
                 </label>
               </div>
 
               <div className="text-sm">
                 <a href="#" className="font-medium text-blue-600 hover:text-blue-500">
-                  忘记密码？
+                  {t('login.form.forgotPassword')}
                 </a>
               </div>
             </div>
@@ -199,7 +203,7 @@ export default function LoginForm() {
                 {loading ? (
                   <FaSpinner className="animate-spin h-5 w-5" />
                 ) : (
-                  '登录'
+                  t('login.form.submit')
                 )}
               </button>
             </div>
@@ -212,7 +216,7 @@ export default function LoginForm() {
                 <div className="w-full border-t border-gray-300" />
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">或者使用</span>
+                <span className="px-2 bg-white text-gray-500">{t('login.divider')}</span>
               </div>
             </div>
           </div>
@@ -246,9 +250,9 @@ export default function LoginForm() {
           {/* Sign Up Link */}
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
-              还没有账户？{' '}
+              {t('login.signup.text')}{' '}
               <Link href="/register" className="font-medium text-blue-600 hover:text-blue-500">
-                注册
+                {t('login.signup.link')}
               </Link>
             </p>
           </div>

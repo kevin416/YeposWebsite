@@ -1,4 +1,10 @@
 {
+  "notFound": {
+    "title": "404",
+    "subtitle": "页面未找到",
+    "description": "您访问的页面不存在或已被移除。",
+    "button": "返回首页"
+  },
   "hero": {
     "title": "专业的软件开发服务",
     "subtitle": "定制您的数字化解决方案",
@@ -9,6 +15,127 @@
     },
     "techStack": "技术栈",
     "scroll": "滚动, 了解更多"
+  },
+  "marketPainPoints": {
+    "title": "市场痛点与解决方案",
+    "subtitle": "深度分析海外华人企业面临的挑战，提供创新的数字化解决方案",
+    "traditionalLabel": "传统方案",
+    "ourLabel": "我们的方案",
+    "statisticsTitle": "解决方案效果对比",
+    "laborCostReduction": "人力成本降低",
+    "inventoryTurnover": "库存周转提升",
+    "acquisitionCostReduction": "获客成本降低",
+    "serviceCoverage": "服务覆盖度",
+    "ctaTitle": "准备开始数字化转型",
+    "ctaSubtitle": "加入我们的平台，体验智能化的商业管理解决方案，让您的企业在数字化时代获得竞争优势",
+    "freeTrial": "免费试用",
+    "bookDemo": "预约演示",
+    "operationalCost": {
+      "category": "运营成本",
+      "problem": "人力成本飙升（如英国NI税15%）",
+      "traditionalSolution": "增加兼职员工",
+      "ourSolution": "AI客服+自动化订单处理",
+      "impact": "减少30%人力成本"
+    },
+    "supplyChain": {
+      "category": "供应链",
+      "problem": "库存管理混乱，采购成本高",
+      "traditionalSolution": "人工电话订货",
+      "ourSolution": "供应商API直连+智能补货",
+      "impact": "提高50%周转率"
+    },
+    "marketing": {
+      "category": "营销获客",
+      "problem": "依赖高佣金平台（30%+）",
+      "traditionalSolution": "被动等单",
+      "ourSolution": "自媒体营销工具+私域流量运营",
+      "impact": "降低60%获客成本"
+    },
+    "services": {
+      "category": "服务单一",
+      "problem": "无法满足留学生多元需求",
+      "traditionalSolution": "单一餐饮服务",
+      "ourSolution": "餐饮/商超/租房/二手/留学等生活服务聚合",
+      "impact": "一站式服务平台"
+    }
+  },
+  "technicalAdvantages": {
+    "title": "技术卓越与创新",
+    "subtitle": "我们采用前沿技术与行业最佳实践，交付高可扩展、高安全、高性能的软件解决方案",
+    "techStack": {
+      "frontend": "前端技术",
+      "backend": "后端技术",
+      "mobile": "移动端",
+      "database": "数据库",
+      "cloud": "云服务",
+      "ai": "人工智能与机器学习"
+    },
+    "developmentProcess": [
+      {
+        "title": "需求分析",
+        "description": "深入理解业务需求与技术要求"
+      },
+      {
+        "title": "敏捷开发",
+        "description": "迭代式开发，定期客户反馈与更新"
+      },
+      {
+        "title": "质量测试",
+        "description": "全流程测试，包括单元、集成与用户验收"
+      },
+      {
+        "title": "上线部署",
+        "description": "无缝部署，CI/CD自动化与监控"
+      }
+    ]
+  },
+  "clientCases": {
+    "title": "客户案例",
+    "subtitle": "我们为各类企业提供定制化的软件解决方案，帮助他们实现数字化转型",
+    "cases": [
+      {
+        "title": "电商平台",
+        "industry": "零售业",
+        "description": "为领先零售连锁企业开发了全面的电商平台。",
+        "results": ["销售额增长150%", "成本降低40%"],
+        "technologies": ["React", "Node.js", "MongoDB"]
+      },
+      {
+        "title": "医疗管理系统",
+        "industry": "医疗健康",
+        "description": "为诊所网络构建了患者管理系统。",
+        "results": ["节省60%时间", "提升患者护理质量"],
+        "technologies": ["Vue.js", "Python", "PostgreSQL"]
+      },
+      {
+        "title": "金融分析仪表板",
+        "industry": "金融业",
+        "description": "为金融服务创建了实时分析仪表板。",
+        "results": ["实时洞察", "报告速度提升90%"],
+        "technologies": ["Angular", "Java", "Redis"]
+      }
+    ]
+  },
+  "team": {
+    "title": "我们的团队",
+    "subtitle": "认识我们成功背后的专家。我们才华横溢的团队汇聚了多年的经验和对创新的热情。",
+    "members": [
+      {
+        "name": "John Doe",
+        "position": "CEO & Founder",
+        "bio": "拥有15年以上技术与创新经验的远见领导者。"
+      },
+      {
+        "name": "Jane Smith",
+        "position": "CTO",
+        "bio": "技术爱好者和软件架构师，对尖端解决方案充满热情。"
+      },
+      {
+        "name": "Mike Johnson",
+        "position": "Lead Designer",
+        "bio": "我们令人惊叹的设计和卓越用户体验背后的创意头脑。"
+      }
+    ]
   },
   "coreValues": {
     "title": "核心价值",
@@ -98,12 +225,31 @@
     "description": "与我们的团队取得联系。我们随时准备为您提供帮助和解答任何问题",
     "info": {
       "phone": "07550006600",
-      "email": "info@yepos.co.uk"
+      "email": "info@yepos.co.uk",
+      "emailTitle": "邮箱",
+      "phoneTitle": "电话"
     },
     "form": {
       "name": "姓名",
       "email": "邮箱",
       "subject": "主题",
+      "product": "感兴趣的产品",
+      "productOptions": {
+        "yepos-manager": "YeposManager（门店 App）",
+        "manager-next": "Manager Next（管理后台）",
+        "print-proxy": "Print Proxy（打印中台）",
+        "yepos-online": "Yepos Online（在线点餐）"
+      },
+      "products": {
+        "yeposManager": "YeposManager（门店 App）",
+        "managerNext": "Manager Next（管理后台）",
+        "printProxy": "Print Proxy（打印中台）",
+        "yeposOnline": "Yepos Online（线上点餐）",
+        "other": "其他 / 咨询"
+      },
+      "preferredTime": "首选演示时间（可选）",
+      "preferredTimePlaceholder": "例如：周二 14:00 - 16:00 或 2026-01-10T14:00",
+      "prefillNotice": "已为您预填：产品",
       "defaultSubject": "网站联系表单",
       "message": "留言",
       "submit": "发送消息",
@@ -112,11 +258,33 @@
       "error": "发送失败，请重试。"
     }
   },
-  "nav": {
-    "services": "服务",
-    "solutions": "解决方案",
-    "contact": "联系我们",
-    "language": "语言"
+  "products": {
+    "title": "我们的产品套件",
+    "description": "覆盖门店端、管理后台与打印中台，构建一体化运营流程。",
+    "yeposManager": {
+      "title": "YeposManager (门店 App)",
+      "description": "手机/平板原生点餐与门店管理，支持员工权限与打印配置。",
+      "highlight": "现场安装与培训"
+    },
+    "managerNext": {
+      "title": "Manager Next（管理后台）",
+      "description": "多店统一后台、订单合并、报表与权限管理，适合连锁门店。",
+      "highlight": "连锁与权限"
+    },
+    "printProxy": {
+      "title": "Print Proxy（打印中台）",
+      "description": "稳定的本地代理打印与重试机制，兼容多种打印机。",
+      "highlight": "兼容旧机型"
+    },
+    "yeposOnline": {
+      "title": "Yepos Online（线上点餐）",
+      "description": "面向顾客的线上点餐与多渠道聚合，支持多语言与多店切换。",
+      "highlight": "多渠道接单"
+    }
+  },
+  "brand": {
+    "name": "Yepos",
+    "tagline": "餐饮一体化解决方案"
   },
   "footer": {
     "description": "为您的企业提供专业的软件开发服务。",
@@ -214,6 +382,175 @@
         "title": "准备开始您的餐厅数字化之旅？",
         "button": "预约免费咨询"
       }
+    }
+  },
+  "companyIntro": {
+    "title": "欧洲首个华人商业",
+    "titleHighlight": "智能生态平台",
+    "subtitle": "致力于打造\"管理+供应链+营销+生活服务\"四位一体的数字化商业基础设施，以英国为起点，通过AI技术赋能海外华人企业，助力其在数字化转型中实现降本增效与业务增长。",
+    "features": [
+      {
+        "title": "智能管理",
+        "description": "提供SaaS管理工具，通过AI自动化减少30%人力成本，提升运营效率"
+      },
+      {
+        "title": "供应链优化",
+        "description": "对接本土供应商，实现智能库存管理，降低采购成本，提高周转率"
+      },
+      {
+        "title": "全渠道营销",
+        "description": "集成推广工具，提升私域流量运营能力，降低获客成本60%"
+      },
+      {
+        "title": "生活服务",
+        "description": "构建涵盖租房、二手交易、留学咨询等留学生生活服务平台"
+      }
+    ],
+    "mission": {
+      "title": "我们的使命",
+      "description": "成为海外华人商业的\"数字基础设施\"，重塑欧洲华人经济生态，让每一位海外华人企业家都能在数字化时代获得成功！"
+    }
+  },
+  "serviceProcess": {
+    "title": "我们的开发流程",
+    "subtitle": "经过验证的方法论，确保从初始概念到最终部署及后续维护的项目成功交付",
+    "steps": [
+      {
+        "title": "需求发现与分析",
+        "description": "我们通过全面分析来了解您的业务需求、目标和技求，为项目奠定坚实基础。"
+      },
+      {
+        "title": "设计与规划",
+        "description": "我们的设计团队创建以用户为中心的界面，架构师规划技术架构。"
+      },
+      {
+        "title": "开发实施",
+        "description": "我们经验丰富的开发团队使用敏捷方法构建您的解决方案，定期更新和反馈。"
+      },
+      {
+        "title": "测试与质量保证",
+        "description": "全面测试确保您的解决方案无缺陷、安全且性能最优。"
+      },
+      {
+        "title": "部署上线",
+        "description": "我们零停机时间部署您的解决方案，确保平滑过渡到生产环境。"
+      },
+      {
+        "title": "支持与维护",
+        "description": "持续的支持、维护和更新，确保您的解决方案平稳运行。"
+      }
+    ],
+    "cta": {
+      "title": "准备开始您的项目了吗？",
+      "subtitle": "让我们讨论您的需求，制定一个完美契合您业务需求和时间安排的定制开发计划。",
+      "consultation": "免费咨询",
+      "portfolio": "查看我们的作品"
+    }
+  },
+  "animatedAbout": {
+    "title": "关于YEPOS",
+    "subtitle": "我们致力于将创意转化为现实。凭借多年的经验和充满激情的团队，我们提供创新解决方案，帮助企业在数字化时代蓬勃发展。",
+    "description": "我们对卓越和客户满意度的承诺驱动着我们所做的一切。我们与客户密切合作，了解他们独特的挑战，并提供超出预期的定制解决方案。",
+    "features": [
+      "行业领先的创新和技术",
+      "专业的专家团队",
+      "成功的项目经验记录",
+      "以客户为中心的方法"
+    ],
+    "cta": "联系我们",
+    "brand": {
+      "name": "YEPOS",
+      "tagline": "创新与卓越"
+    }
+  },
+  "professionalCompanyIntro": {
+    "title": "跨国的软件开发公司",
+    "subtitle": "我们是一家具有跨国的专业软件开发公司，专注于定制软件解决方案、移动应用开发和数字化转型。我们的国际化团队融合前沿技术与深厚行业经验，为企业提供创新方案，助力业务增长",
+    "stats": [
+      {
+        "number": "5+",
+        "label": "服务国家"
+      },
+      {
+        "number": "95+",
+        "label": "完成项目"
+      },
+      {
+        "number": "95%",
+        "label": "客户满意度"
+      },
+      {
+        "number": "24/7",
+        "label": "全天候支持"
+      }
+    ],
+    "advantages": [
+      {
+        "title": "全球化视野",
+        "description": "国际化团队，跨文化背景，深谙全球市场"
+      },
+      {
+        "title": "技术卓越",
+        "description": "采用前沿技术与最佳实践，打造高质量软件"
+      },
+      {
+        "title": "安全为先",
+        "description": "企业级安全标准，符合国际合规要求"
+      },
+      {
+        "title": "敏捷交付",
+        "description": "快速开发迭代，持续集成与部署"
+      },
+      {
+        "title": "专属团队",
+        "description": "经验丰富的开发与项目管理团队全程服务"
+      },
+      {
+        "title": "质量保障",
+        "description": "全流程测试与质量控制，确保方案可靠"
+      }
+    ],
+    "mission": {
+      "title": "我们的使命",
+      "description": "通过创新软件解决方案，赋能全球企业实现数字化转型，提升运营效率，打造可持续竞争优势",
+      "values": [
+        "创新驱动",
+        "质量为本",
+        "客户至上",
+        "全球视野"
+      ]
+    }
+  },
+  "blog": {
+    "featured": {
+      "title": "最新洞察",
+      "description": "探索我们专家团队的最新趋势、技巧和洞察。通过我们精心策划的博客内容保持领先。"
+    },
+    "views": "次浏览",
+    "readMore": "阅读更多",
+    "viewAllPosts": "查看所有文章"
+  },
+  "login": {
+    "title": "欢迎回来",
+    "subtitle": "登录您的账户",
+    "form": {
+      "email": "邮箱地址",
+      "emailPlaceholder": "请输入您的邮箱",
+      "password": "密码",
+      "passwordPlaceholder": "请输入您的密码",
+      "rememberMe": "记住我",
+      "forgotPassword": "忘记密码？",
+      "submit": "登录"
+    },
+    "divider": "或者使用",
+    "signup": {
+      "text": "还没有账户？",
+      "link": "注册"
+    },
+    "success": "登录成功！正在跳转...",
+    "error": {
+      "invalidCredentials": "登录失败，请重试。",
+      "networkError": "网络错误，请检查连接后重试。"
     }
   }
 } 

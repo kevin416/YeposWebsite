@@ -2,65 +2,54 @@
 
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
-
-const team = [
-  {
-    name: "John Doe",
-    position: "CEO & Founder",
-    bio: "Visionary leader with 15+ years of experience in technology and innovation.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      github: "#"
-    }
-  },
-  {
-    name: "Jane Smith",
-    position: "CTO",
-    bio: "Tech enthusiast and software architect with a passion for cutting-edge solutions.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      github: "#"
-    }
-  },
-  {
-    name: "Mike Johnson",
-    position: "Lead Designer",
-    bio: "Creative mind behind our stunning designs and exceptional user experiences.",
-    image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      github: "#"
-    }
-  }
-];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5
-    }
-  }
-};
+import { useTranslation } from '../i18n/client';
+import { useParams } from 'next/navigation';
 
 export default function AnimatedTeam() {
+  const params = useParams();
+  const { t } = useTranslation(params.lng as string);
+
+  const teamMembers = t('team.members', { returnObjects: true }) as Array<{
+    name: string;
+    position: string;
+    bio: string;
+  }>;
+
+  const team = teamMembers.map((member, index) => ({
+    ...member,
+    image: [
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+    ][index],
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#"
+    }
+  }));
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
     <section id="team" className="py-24 relative overflow-hidden bg-gray-50">
       {/* Background decoration */}
@@ -76,7 +65,7 @@ export default function AnimatedTeam() {
             viewport={{ once: true }}
             className="section-title inline-block"
           >
-            Our Team
+            {t('team.title')}
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -85,8 +74,7 @@ export default function AnimatedTeam() {
             viewport={{ once: true }}
             className="text-xl text-gray-600 mt-8 max-w-3xl mx-auto"
           >
-            Meet the experts behind our success. Our talented team brings together years of experience 
-            and passion for innovation.
+            {t('team.subtitle')}
           </motion.p>
         </div>
 
@@ -156,4 +144,4 @@ export default function AnimatedTeam() {
       </div>
     </section>
   );
-} 
+}

@@ -2,36 +2,39 @@
 
 import { motion } from 'framer-motion';
 import { AlertTriangle, CheckCircle, ArrowRight, Zap } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const MarketPainPoints = () => {
+  const { t } = useTranslation();
+
   const painPoints = [
     {
-      category: "运营成本",
-      problem: "人力成本飙升（如英国NI税15%）",
-      traditionalSolution: "增加兼职员工",
-      ourSolution: "AI客服+自动化订单处理",
-      impact: "减少30%人力成本"
+      category: t('marketPainPoints.operationalCost.category'),
+      problem: t('marketPainPoints.operationalCost.problem'),
+      traditionalSolution: t('marketPainPoints.operationalCost.traditionalSolution'),
+      ourSolution: t('marketPainPoints.operationalCost.ourSolution'),
+      impact: t('marketPainPoints.operationalCost.impact')
     },
     {
-      category: "供应链",
-      problem: "库存管理混乱，采购成本高",
-      traditionalSolution: "人工电话订货",
-      ourSolution: "供应商API直连+智能补货",
-      impact: "提高50%周转率"
+      category: t('marketPainPoints.supplyChain.category'),
+      problem: t('marketPainPoints.supplyChain.problem'),
+      traditionalSolution: t('marketPainPoints.supplyChain.traditionalSolution'),
+      ourSolution: t('marketPainPoints.supplyChain.ourSolution'),
+      impact: t('marketPainPoints.supplyChain.impact')
     },
     {
-      category: "营销获客",
-      problem: "依赖高佣金平台（30%+）",
-      traditionalSolution: "被动等单",
-      ourSolution: "自媒体营销工具+私域流量运营",
-      impact: "降低60%获客成本"
+      category: t('marketPainPoints.marketing.category'),
+      problem: t('marketPainPoints.marketing.problem'),
+      traditionalSolution: t('marketPainPoints.marketing.traditionalSolution'),
+      ourSolution: t('marketPainPoints.marketing.ourSolution'),
+      impact: t('marketPainPoints.marketing.impact')
     },
     {
-      category: "服务单一",
-      problem: "无法满足留学生多元需求",
-      traditionalSolution: "单一餐饮服务",
-      ourSolution: "餐饮/商超/租房/二手/留学等生活服务聚合",
-      impact: "一站式服务平台"
+      category: t('marketPainPoints.services.category'),
+      problem: t('marketPainPoints.services.problem'),
+      traditionalSolution: t('marketPainPoints.services.traditionalSolution'),
+      ourSolution: t('marketPainPoints.services.ourSolution'),
+      impact: t('marketPainPoints.services.impact')
     }
   ];
 
@@ -67,10 +70,10 @@ const MarketPainPoints = () => {
           className="text-center mb-16"
         >
           <h4 className="text-4xl md:text-2xl  text-gray-900 mb-6">
-            市场痛点与解决方案
+            {t('marketPainPoints.title')}
           </h4>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            深度分析海外华人企业面临的挑战，提供创新的数字化解决方案
+            {t('marketPainPoints.subtitle')}
           </p>
         </motion.div>
 
@@ -108,7 +111,7 @@ const MarketPainPoints = () => {
                       <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center mr-3">
                         <span className="text-gray-600 text-sm ">传</span>
                       </div>
-                      <h4 className="text-lg font-semibold text-gray-700">传统方案</h4>
+                      <h4 className="text-lg font-semibold text-gray-700">{t('marketPainPoints.traditionalLabel')}</h4>
                     </div>
                     <p className="text-gray-600">{item.traditionalSolution}</p>
                   </div>
@@ -126,7 +129,7 @@ const MarketPainPoints = () => {
                       <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3">
                         <Zap className="w-4 h-4 text-white" />
                       </div>
-                      <h4 className="text-lg font-semibold text-blue-900">我们的方案</h4>
+                      <h4 className="text-lg font-semibold text-blue-900">{t('marketPainPoints.ourLabel')}</h4>
                     </div>
                     <p className="text-blue-800 mb-3">{item.ourSolution}</p>
                     <div className="inline-flex items-center px-3 py-1 bg-blue-500 text-white text-sm rounded-full">
@@ -149,23 +152,23 @@ const MarketPainPoints = () => {
           className="mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h4 className="text-2xl  text-center mb-8">解决方案效果对比</h4>
+            <h4 className="text-2xl  text-center mb-8">{t('marketPainPoints.statisticsTitle')}</h4>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl  mb-2">30%</div>
-                <div className="text-blue-100">人力成本降低</div>
+                <div className="text-blue-100">{t('marketPainPoints.laborCostReduction')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl  mb-2">50%</div>
-                <div className="text-blue-100">库存周转提升</div>
+                <div className="text-blue-100">{t('marketPainPoints.inventoryTurnover')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl  mb-2">60%</div>
-                <div className="text-blue-100">获客成本降低</div>
+                <div className="text-blue-100">{t('marketPainPoints.acquisitionCostReduction')}</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl  mb-2">100%</div>
-                <div className="text-blue-100">服务覆盖度</div>
+                <div className="text-blue-100">{t('marketPainPoints.serviceCoverage')}</div>
               </div>
             </div>
           </div>
@@ -181,18 +184,17 @@ const MarketPainPoints = () => {
         >
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
             <h4 className="text-2xl  text-gray-900 mb-4">
-              准备开始数字化转型
+              {t('marketPainPoints.ctaTitle')}
             </h4>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              加入我们的平台，体验智能化的商业管理解决方案，
-              让您的企业在数字化时代获得竞争优势
+              {t('marketPainPoints.ctaSubtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-300">
-                免费试用
+                {t('marketPainPoints.freeTrial')}
               </button>
               <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-300">
-                预约演示
+                {t('marketPainPoints.bookDemo')}
               </button>
             </div>
           </div>

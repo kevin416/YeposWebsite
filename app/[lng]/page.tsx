@@ -1,6 +1,8 @@
 // app/[lng]/page.tsx
 
 import AnimatedHero from '../components/AnimatedHero';
+import SiteHero from '../components/SiteHero';
+import ProductsList from '../components/ProductsList';
 import ProfessionalCompanyIntro from '../components/ProfessionalCompanyIntro';
 import TechnicalAdvantages from '../components/TechnicalAdvantages';
 import SixCoreGoals from '../components/SixCoreGoals';
@@ -22,7 +24,15 @@ export default async function Home({ params }: { params: Promise<{ lng: string }
   
   return (
     <main className="overflow-hidden">
-      {/* Hero Section */}
+      {/* Header is rendered globally in app/layout.tsx */}
+
+      {/* New Site Hero (redesign) */}
+      <SiteHero />
+
+      {/* Products quick list */}
+      <ProductsList />
+
+      {/* Legacy animated hero retained below as additional visual */}
       <AnimatedHero />
       
       {/* Professional Company Introduction */}

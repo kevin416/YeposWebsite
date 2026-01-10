@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" preserveAspectRatio="xMidYMid meet">
+  <rect width="100%" height="100%" fill="#f8fafc" />
+  <g fill="#e9d5ff">
+    <rect x="220" y="40" width="360" height="720" rx="28" fill="#fff" stroke="#ede9fe" />
+    <rect x="260" y="80" width="280" height="48" rx="8" fill="#f3e8ff" />
+    <rect x="260" y="144" width="280" height="16" rx="8" fill="#faf5ff" />
+    <rect x="260" y="176" width="280" height="16" rx="8" fill="#faf5ff" />
+    <rect x="260" y="208" width="180" height="16" rx="8" fill="#f3e8ff" />
+  </g>
+  <text x="400" y="36" text-anchor="middle" font-size="18" fill="#6b21a8">App 界面占位</text>
+</svg>
